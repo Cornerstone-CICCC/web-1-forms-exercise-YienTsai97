@@ -1,14 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Information Form</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
         <!-- FORM FIELDS HERE -->
+        <fieldset>
+            <legend>Personal Infromation</legend>
+            <div>
+                <div><label for="name">Name:</label></div>
+                <input type="text" name="name" id="name" autocomplete="off">
+            </div>
+            <div>
+                <div><label for="email">Email:</label></div>
+                <input type="email" name="email" id="email" pattern="[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]+"
+                title="not correct email form">
+            </div>
+            <div>
+                <div><label for="password">Password:</label></div>
+                <input type="password" name="password" id="password" autocomplete="off">
+            </div>
+            <div>
+                <div><label for="date">Date Of Birth:</label></div>
+                <input type="date" name="date" id="date">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <div>
+                <div><label for="color">Favorite Color:</label></div>
+                <input type="color" name="color_picker">
+            </div>
+            <div>
+                <div><label for="hobby">Hobby:</label></div>
+                <input type="text" name="hobby" id="hobby" autocomplete="off">
+            </div>
+            <div>
+                <div><label for="experience">Experience Level:</label></div>
+                <input type="range" name="experience" id="experience"
+                min="0" max="10" autocomplete="off">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Preferences</legend>
+            <div>
+                <div><label for="Contact">Preffered Contact Method:</label></div>
+                <select id="contact">
+                    <option value="email" selected >Email</option>
+                    <option value="phone" >Phone</option>
+                    <option value="sms" >SMS</option>
+                </select>
+            </div>
+            <div>
+                <div><label for="checkbox">Subscribe to Newsletter:</label></div>
+                <input type="checkbox" name="checkbox" value="">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div></div><legend>Gender</legend></div>
+            <div>
+                <label>
+                    <input type="radio" name="gender" value="male" checked>
+                    <span>Male</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    <span>Female</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="gender" value="other">
+                    <span>Other</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>More Information</legend>
+            <div>
+                <label for="bio">Bio:</label>
+            </div>
+            <textarea name="bio" id="bio" rows="5"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <div>
+                <label for="file">Resume and other certification:</label>
+            </div>
+            <input type="file" multiple name="file" accept=".pdf,doc.,docx.,.jpg,.png,.webp">
+        </fieldset>
+
+        <fieldset>
+            <legend>Sunmission</legend>
+            <button type="reset" class="btn">Reset</button>
+            <button type="submit" class="btn">Submit</button>
+        </fieldset>
+
     </form>
 </body>
+
 </html>

@@ -12,3 +12,97 @@ form {
   max-width: 600px;
   margin: 20px auto;
 }
+
+fieldset{
+  border: 1.5px solid #e8e8e8;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+legend{
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 3px 7px;
+  ~div{
+    margin-top: .5rem;
+  }
+}
+
+label{
+  display: flex;
+  align-items: center;
+}
+
+div{
+  margin-bottom: .3rem;
+}
+
+
+input{
+  margin-bottom:.5rem ;
+  align-items: center;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 3px;
+  height: 1.5rem;
+  padding:0;
+
+  &[type="text"]{
+    width:100%;
+  }
+  &[type="email"]{
+    width:100%;
+  }
+  &[type="password"]{
+    width:100%;
+  }
+  &[type="date"]{
+    width:100%;
+    height: 1.7rem;
+  }
+  &[type="color"]{
+    border: 5px solid #e8e8e8;
+    border-radius: 5px;
+    width:100%;
+    height: 2.5rem;
+  }
+  &[type="file"]{
+    width:calc(100% - 1rem);
+    padding:.5rem;
+    border: 1px solid #e8e8e8;
+    border-radius:1px;
+  }
+  &#hobby{
+    width:25%;
+  }
+  &#experience{
+    color: blue;
+  }
+}
+
+
+textarea{
+  &#bio{
+  border: 1px solid #e8e8e8;
+  border-radius:1px;
+  color:#e8e8e8;
+  width:100%;
+  padding:0;
+  }
+}
+
+select{
+  width:100%;
+  height: 2rem;
+  border: 1px solid #e8e8e8;
+  border-radius:3px;
+}
+
+
+.btn{
+  background-color: blue;
+  color:white;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  margin: 3px;
+}
